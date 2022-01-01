@@ -80,7 +80,7 @@ For demo purpose, instead of sanitized the payload, it's hard coded to a non-ins
     
 From your browser, entry to the following to trigger the REST API call.  
   
-    http://localhost:8080/PayLoad?payload=${java:os}
+    http://localhost:8080/PayLoad?payload=$%7Bjava:os%7D
   
   ![image](https://user-images.githubusercontent.com/853925/147844381-a20bc303-47eb-4d8f-9c1e-582c9bd6d017.png)
 
@@ -97,7 +97,7 @@ From your browser, entry to the following to trigger the REST API call.
 ### Stop and Start your REST API service from IDE or from command line again
 From your browse, entry to the following to trigger the REST API call, and noticed that the ${java:OS} variable has been replace by the OS value in the INFO log.  
   
-    http://localhost:8080/PayLoad?payload=${java:os}
+    http://localhost:8080/PayLoad?payload=$%7Bjava:os%7D
 ![image](https://user-images.githubusercontent.com/853925/147844478-65d0da64-f98a-4f11-b45a-d9a420f1ed04.png)
 
 
