@@ -40,7 +40,7 @@ Spring Boot is using logback by default.  It is also supporting the use of log4j
       </dependency>
 ### 3. Import the Maven project to your Eclipse IDE
 
-### 4. Use Log4J2 to log environment variable ${java:os}
+### 4. Use Log4J2 log, to log environment variable ${java:os} as INFO instead of ${jndi:ldap://...} trigger RCE
 Here is the cutdown version of the REST API implemention pass payload as RequestParam.  
 For demo purpose, instead of sanitized the payload, it's hard coded to a non-instructive operation, to log the environment value for OS 
 
@@ -73,8 +73,12 @@ For demo purpose, instead of sanitized the payload, it's hard coded to a non-ins
       }
     }
 
- ### 5. Start your REST API service from IDE or from command line
- From your browse, entry to the following to trigger the REST API call, and noticed that the ${java:OS} variable has been replace by the OS value in the INFO log.  
+ ### 5. Start your REST API service from IDE or from command line  
+    
+        java -jar target/vul-log4j2-0.0.1-SNAPSHOT.jar
+ 
+    
+From your browser, entry to the following to trigger the REST API call.  
   
     http://localhost:8080/PayLoad?payload=${java:os}
   
