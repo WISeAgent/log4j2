@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: au.com.wiseagent.springboot.log4j2.VulLog4j2ApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.846 s - in au.com.wiseagent.springboot.log4j2.VulLog4j2ApplicationTests

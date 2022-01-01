@@ -33,8 +33,9 @@ public class VulLog4j2Application {
       return "payload received=" + payload;
 	} 
 	/**
-	 *  http://localhost:8080/VulLog4j2PayLoad?payload=${env:username}
-	 *  http://localhost:8080/VulLog4j2PayLoad?payload=${jndi:ldap://localhost}
+	 * Sample usages:
+	 * http://localhost:8080/VulLog4j2PayLoad?payload=${env:username}
+	 * http://localhost:8080/VulLog4j2PayLoad?payload=${jndi:ldap://localhost}
 	 * @param payload
 	 * @return
 	 */
