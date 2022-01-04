@@ -83,9 +83,9 @@ For demo purpose, instead of sanitized the payload, it's hard coded to a non-ins
       @GetMapping("/PayLoad")
       @ResponseBody
         public String PayLoad(@RequestParam  String payload) {
-        payload="${java:os}"; // override the payload
-        logger.info(payload);
-        return "payload received" + payload;
+        payload="${java:os}";   // override the payload
+        logger.info(payload);   // payload get trigged here!!!
+        return "payload received: " + payload;
       }
     }
 
